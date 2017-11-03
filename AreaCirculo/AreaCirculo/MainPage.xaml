@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:AreaCirculo"
+             x:Class="AreaCirculo.MainPage">
+    <ContentPage.Content>
+        <StackLayout Padding="16">
+            
+            <Label Text="Circle area calculator"
+                VerticalOptions="Center" 
+                HorizontalOptions="CenterAndExpand" />
+
+            <Entry Text="{Binding Radius}"
+                x:Name="EntryRadius"
+                Keyboard="Numeric"
+                VerticalOptions="Start"
+                Placeholder="Enter circle radius"
+                HorizontalOptions="StartAndExpand" />
+            
+            <Button Text="Calculate"
+                    Clicked="ButtonCalculate_Clicked" />
+            
+            <Entry Text="{Binding Area}"
+                   IsEnabled="False"
+                   Keyboard="Numeric"
+                   VerticalOptions="Start"
+                   Placeholder="Circle area"
+                   HorizontalOptions="StartAndExpand" />
+            
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
